@@ -2,61 +2,324 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSGO - Online Betting</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>RSGO 365 - Home</title>
+    <meta property="og:description" content="Rsgo 365 is the best destination for color games in India. Visit all our trusted domains from this page!">
+    <script src="https://static.cc-bet.app/world/rsgo.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="https://static.cc-bet.app/market/rsgo/rsgo_app.jpg" type="image/png">
+    <link rel="shortcut icon" href="https://static.cc-bet.app/casinotheme/titlealt.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Saira', sans-serif;
+            position: relative;
+            z-index: 0;
+            background: #000; /* Fallback color */
+        }
+        .customfont {
+            font-family: "Saira", sans-serif;
+        }
+        .bg-slate {
+            background-color: #242424;
+        }
+        .montserrat {
+            font-family: 'Montserrat';
+        }
+        
+        .poppins {
+            font-family: 'Poppins';
+        }
+
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .popup-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .popup-box {
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            transform: scale(0.5);
+            width: 300px;
+        }
+
+        .popup-box.active {
+            transform: scale(1);
+        }
+
+        .popup-box h2 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .popup-box button {
+            background: #ffbb33;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .popup-box button:hover {
+            background: #ff9900;
+        }
+
+        .shadow__btn {
+            background: #ff9900;
+            box-shadow: 0 0 25px #ffd756;
+            transition: 0.5s;
+            transition-property: box-shadow;
+        }
+
+        .shadow__btn:hover {
+            box-shadow: 0 0 5px #ffd756,
+                0 0 20px #ffd756,
+                0 0 50px #ffd756,
+                0 0 100px #ffd756;
+        }
+        .glassshine {
+            background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 48.44%, #ffffff1a 75.52%, rgba(255, 255, 255, 0) 100%);
+            background-repeat: no-repeat;
+            animation: bg-move linear 3s infinite;
+            }
+        .shine {
+            background-image: linear-gradient(270deg, rgba(239, 230, 100, 0) 48.44%, #efe664 75.52%, rgba(239, 237, 100, 0) 100%);
+            background-repeat: no-repeat;
+            animation: bg-move linear 2s infinite;
+            }
+        .subshine {
+            background-image: linear-gradient(270deg, rgba(239, 230, 100, 0) 48.44%, #fff898 75.52%, rgba(239, 237, 100, 0) 100%);
+            background-repeat: no-repeat;
+            animation: bg-move linear 4s infinite;
+            }
+        @-webkit-keyframes bg-move {
+            0%   { background-position: -500px 0; }
+            100% { background-position: 1000px 0; }
+            }
+        @keyframes bg-move {
+            0%   { background-position: -500px 0; }
+            100% { background-position: 1000px 0; }
+            }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in;
+            -webkit-animation: fadeIn 1s ease-in;
+        }
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  }
+  @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
+    .fade-out {
+        animation: fadeOut 1s ease-out forwards;
+    }
+  .invisible {
+    opacity: 0;
+  }
+  .loader {
+        border: 8px solid #252525;
+        border-top: 8px solid #ffeb33e8;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+</style>
 </head>
-<body>
-
-<!-- Header Section -->
-<header>
-    <div class="logo">
-        <img src="logo.png" alt="RSGO">
+<body class="bg-black text-gray-100">
+    <!-- Navbar -->
+   <div id="spinner" class="flex flex-col items-center justify-center fixed inset-0 bg-black z-50">
+            <img src="https://static.cc-bet.app/casinotheme/titlealt.png" alt="Logo" class="h-12 mb-8">
+            <div class="loader"></div>           
     </div>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+       
+    <nav class="shadow-md">
+        <div class="z-40 glassshine fixed container bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg mx-auto px-4 py-4 flex shadow-2xl border border-b-1 border-yellow-300 border-opacity-20">
+            <img src="https://static.cc-bet.app/casinotheme/titlealt.png" alt="Logo" class="ml-2 h-8 mr-2">
+        </div>
     </nav>
-</header>
+    
+    <div class="flex items-center justify-center">
+       <!-- <div class="w-full h-full">
+            <img oncontextmenu="return false;" src="https://static.cc-bet.app/world/banner.jpg" class="opacity-100 object-cover w-full h-full mt-16" alt="error loading image">
+        </div>-->
+        <!-- Swiper -->
+      <div class="swiper mySwiper h-3/4">
+         <div class="swiper-wrapper">
+         <img oncontextmenu="return false;" src="https://static.cc-bet.app/carousel/d758975ab70eb7a265e3239b6bbebc7f.jpg" class="swiper-slide opacity-100 object-cover w-full h-full mt-16" alt="error loading image">
+         <img oncontextmenu="return false;" src="https://static.cc-bet.app/carousel/369195c55fecc1b2a0eb4d1c82f7546b.jpg" class="swiper-slide opacity-100 object-cover w-full h-full mt-16" alt="error loading image">
+         <img oncontextmenu="return false;" onclick="window.location = ('https://rsgo.app')" src="https://static.cc-bet.app/carousel/f5c51687760a674d18260e8d99f74684.jpg" class="swiper-slide opacity-100 object-cover w-full h-full mt-16" alt="error loading image">
+         <img oncontextmenu="return false;" src="https://static.cc-bet.app/carousel/1689dd1d2d4b106c2f09121082688e23.jpg" class="swiper-slide opacity-100 object-cover w-full h-full mt-16" alt="error loading image">
+         <img oncontextmenu="return false;" src="https://static.cc-bet.app/carousel/29f9183f3055dd8e1d648c672d59ddde.jpg" class="swiper-slide opacity-100 object-cover w-full h-full mt-16" alt="error loading image">
+         <img oncontextmenu="return false;" onclick="window.location = ('https://telegram.me/+9gtksa9jDR5jNDQ1')" src="https://static.cc-bet.app/carousel/506abfae2319ccecd7ecbf6505551daa.jpg" class="swiper-slide opacity-100 object-cover w-full h-full mt-16" alt="error loading image">
+         </div>
+         <div class="swiper-pagination"></div>
+      </div>
 
-<!-- Main Section -->
-<section class="hero">
-    <div class="hero-text">
-        <h1>Welcome to RSGO</h1>
-        <p>Your trusted platform for secure transactions and fast payments.</p>
-        <button>Join Now</button>
-    </div>
-</section>
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<!-- Services Section -->
-<section class="services">
-    <h2>Our Services</h2>
-    <div class="service-card">
-        <h3>Fast Payments</h3>
-        <p>Quick and reliable payment processing.</p>
+      <!-- Initialize Swiper -->
+      <script>
+         var swiper = new Swiper(".mySwiper", {
+         pagination: {
+            el: ".swiper-pagination",
+         },
+         autoplay: {
+            delay: 3000,
+         }
+         });
+      </script>
+    </div>    
+    
+    <!-- Title -->
+    <div class="mt-6 container mx-auto px-4 py-4">
+        <div class="glassshine bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg border border-b-1 border-yellow-200 border-opacity-20 rounded-lg p-6">
+            <h2 style="font-size: 1.42rem;" class="font-bold mb-8 text-center text-white italic">TRUSTED RSGO SERVERS <i class="fa-regular text-green-500 fa-circle-check"></i></h2>
+            <div class="shadow grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 font-bold">
+               <div class="bg-yellow-400 shine text-gray-900 rounded-lg px-4 py-2 text-center cursor-pointer" onclick="redirectToDomain(this)">rsgo.win <i class="fa-solid fa-arrow-right"></i></div>
+               <div class="bg-yellow-400 shine text-gray-900 rounded-lg px-4 py-2 text-center cursor-pointer" onclick="redirectToDomain(this)">rsgo1.com <i class="fa-solid fa-arrow-right"></i></div>
+               <div class="bg-yellow-400 shine text-gray-900 rounded-lg px-4 py-2 text-center cursor-pointer" onclick="redirectToDomain(this)">rsgo2.com <i class="fa-solid fa-arrow-right"></i></div>
+               <div class="bg-yellow-400 shine text-gray-900 rounded-lg px-4 py-2 text-center cursor-pointer" onclick="redirectToDomain(this)">rsgo3.com <i class="fa-solid fa-arrow-right"></i></div>
+               <div class="bg-yellow-400 shine text-gray-900 rounded-lg px-4 py-2 text-center cursor-pointer" onclick="redirectToDomain(this)">rsgo4.com <i class="fa-solid fa-arrow-right"></i></div>
+               <div class="bg-yellow-400 shine text-gray-900 rounded-lg px-4 py-2 text-center cursor-pointer" onclick="redirectToDomain(this)">rsgo5.com <i class="fa-solid fa-arrow-right"></i></div>
+               <div class="bg-yellow-400 shine text-gray-900 rounded-lg px-4 py-2 text-center cursor-pointer" onclick="redirectToDomain(this)">rsgo6.com <i class="fa-solid fa-arrow-right"></i></div>
+               <div class="bg-yellow-400 shine text-gray-900 rounded-lg px-4 py-2 text-center cursor-pointer" onclick="redirectToDomain(this)">rsgo7.com <i class="fa-solid fa-arrow-right"></i></div>
+               <div class="bg-yellow-400 shine text-gray-900 rounded-lg px-4 py-2 text-center cursor-pointer" onclick="redirectToDomain(this)">rsgo8.com <i class="fa-solid fa-arrow-right"></i></div>
+               <div class="bg-yellow-400 shine text-gray-900 rounded-lg px-4 py-2 text-center cursor-pointer" onclick="redirectToDomain(this)">rsgo9.com <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+        </div>
     </div>
-    <div class="service-card">
-        <h3>Secure Transactions</h3>
-        <p>100% secure payment methods for your peace of mind.</p>
+    <div class="container mx-auto px-4 py-8">
+        <div class="relative">
+            <input type="text" id="searchInput" class="w-full px-4 py-2 border border-gray-600 rounded-full bg-slate text-gray-100 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent italic animate-pulse" placeholder="Enter app link to verify">
+            <button onclick="validateDomain()" class="absolute right-2 top-2 text-yellow-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </button>
+        </div>
     </div>
-    <div class="service-card">
-        <h3>Prediction Channels</h3>
-        <p>Reliable betting predictions to help you win.</p>
+    <div class="container mx-auto px-4">
+        <div class="rounded-lg shadow-lg p-6">
+            <h1 class="text-2xl font-bold text-yellow-400 italic mb-6 area-container invisible">TRUSTED BY INDIA <i class="fa-solid fa-shield-check text-green-500"></i></h1>        
+            <h1 class="text-xl font-bold text-gray-200 mb-2 montserrat italic area-container invisible"><i class="fa-regular fa-money-bill-transfer"></i> Fast payments</h1>
+            <h1 class="text-xl font-bold text-gray-200 mb-2 montserrat italic area-container invisible"><i class="fa-solid fa-lock"></i> Safe and secure</h1>
+            <h1 class="text-xl font-bold text-gray-200 mb-2 montserrat italic area-container invisible"><i class="fa-regular fa-circle-xmark"></i> No autobots</h1>
+            <h1 class="text-xl font-bold text-gray-200 mb-2 montserrat italic area-container invisible"><i class="fa-brands fa-telegram"></i> Prediction channels</i></h1>
+        </div>
     </div>
-</section>
+    <div class="container mx-auto px-4 py-4 area-container invisible">
+        <div class="rounded-lg shadow-lg p-6">
+            <h1 class="text-2xl font-bold text-yellow-400 italic mb-6">OUR PAYMENT PARTNERS</h1>        
+            <img src="https://d3g4wmezrjkwkg.cloudfront.net/website/images/homePage/withdrawalPartner_bannerV2.webp">    
+        </div>
+    </div>
+    <div class="area-container invisible container mx-auto px-4 py-4">
+        <div class="rounded-lg shadow-lg p-6">
+            <h1 class="text-2xl font-bold text-yellow-400 italic mb-2">ABOUT US</h1>        
+            <h2 class="text-lg font-light text-gray-200 italic">Since 2009, RSGO has been India's most trusted betting app, boasting over 300,000 daily active users, lightning-fast deposit and withdrawal. Join us and get rich today!.</h2>        
+        </div>
+    </div>
 
-<!-- Footer Section -->
-<footer>
-    <ul>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</footer>
-
+    <div id="popup" class="popup-overlay font-semibold text-xl">
+        <div class="popup-box">
+            <h2 id="popupMessage"></h2>
+            <button onclick="closePopup()" class="mt-4">Close</button>
+        </div>
+    </div>
 </body>
 </html>
